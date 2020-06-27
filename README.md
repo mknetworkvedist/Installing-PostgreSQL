@@ -11,3 +11,17 @@ Step3 :- sudo apt-get update
 Step4 :- sudo apt-get install pgadmin4 pgadmin4-apache2
 
 http://example.com/pgAdmin4
+
+
+#Connect as postgres user and set admin password.
+
+[root@postgresql-01 ~]# su - postgres
+-bash-4.2$ psql
+psql (11.4)
+Type "help" for help.
+
+postgres=# ALTER USER postgres WITH PASSWORD '123';
+ALTER ROLE
+postgres=# \q
+-bash-4.2$ exit
+logout
